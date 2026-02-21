@@ -76,6 +76,8 @@ dependencies = [
     "ultralytics-thop>=2.0.0", # FLOPs computation https://github.com/ultralytics/thop
     "torchinfo>=1.8.0",
     "tqdm>=4.67.1",
+    "pandas>=2.3.3",
+    "scikit-learn>=1.7.2",
 ]
 
 # Optional dependencies ------------------------------------------------------------------------------------------------

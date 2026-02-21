@@ -7,8 +7,8 @@ VALIDATE = True
 def main():
     # master_model = YOLO("yolo11n.pt")
     # master_model = YOLO("yolo11n-dist.yaml")
-    master_model = YOLO("./runs/dist/train379/weights/best.pt")
-    # master_model = YOLO("../weights/yolo11n_KITTI_2025-12-09-01_ep500.pt")
+    # master_model = YOLO("./runs/dist/train379/weights/best.pt")
+    master_model = YOLO("../weights/yolo11n_2026-01-12-01_ep200.pt")
 
     master_model.export(format="openvino")
     master_model.export(format="ncnn")

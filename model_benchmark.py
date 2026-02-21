@@ -158,8 +158,8 @@ if __name__ == "__main__":
     # MODEL = "./yolo11n.onnx"
     # MODEL = "./yolo11n_openvino_model"
     # MODEL = "./yolo11n_ncnn_model"
-    # MODEL = "../weights/yolo11n_KITTI_2025-12-09-01_ep500.pt"
-    MODEL = "./runs/dist/train392/weights/best.pt"
+    MODEL = "../weights/yolo11n-dist_2026-01-12-02_ep200.pt"
+    # MODEL = "./runs/dist/train392/weights/best.pt"
     TASK = "dist"
     DEVICE = "cpu"
 

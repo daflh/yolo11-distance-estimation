@@ -137,7 +137,7 @@ class BirdEyeView:
 
 def send_telemetry_message(msg):
     try:
-        res = requests.post("https://api.daflh.dev/telegram/sendMessage", json={"message": msg})
+        res = requests.post("https://x.com/telegram/sendMessage", json={"message": msg})
         if res.status_code != 200:
             raise Exception(f"Error {res.status_code}")
     except Exception as e:

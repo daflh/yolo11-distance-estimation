@@ -1669,6 +1669,18 @@ class DistMetrics(DetMetrics):
 
         return base + (mae_c, mre_c)
 
+    def export_metrics_to_csv(self, target_dist, pred_dist, file_path: Path):
+        import pandas as pd
+    
+        df = pd.DataFrame({
+            "target_dist": target_dist,
+            "pred_dist": pred_dist,
+        })
+        df["abs_error"] = np.abs(df["pred_dist"] - df["target_dist"])
+        df["rel_error"] = df["abs_error"] / (np.abs(df["target_dist"]) + 1e-9)
+        
+        df.to_csv(file_path, index=False)
+
     def process(self, save_dir: Path = Path("."), plot: bool = False, on_plot=None) -> dict[str, np.ndarray]:
         stats = DetMetrics.process(self, save_dir=save_dir, plot=plot, on_plot=on_plot)
         if not stats:
@@ -1698,6 +1710,8 @@ class DistMetrics(DetMetrics):
                 self._mean_dist_met[0, 0] = float(np.mean(err)) # MAE
                 self._mean_dist_met[1, 0] = float(np.mean(err / denom)) # MRE
                 self._mean_dist_met[2, 0] = float(np.sqrt(np.mean(err ** 2))) # RMSE
+                # export per-prediction distance error analysis to CSV
+                # self.export_metrics_to_csv(target_dist[sel], pred_dist[sel], save_dir / "distance_error_analysis.csv")
 
             # mean MAE breakpoints calculation
             for i in range(len(self.met_breakpoints) + 1):

@@ -25,7 +25,7 @@ def main():
     # model.info(verbose=True, detailed=True)
     # summary(model.model, input_size=(1, 3, 640, 640))
     
-    model.add_callback("on_train_epoch_end", on_epoch_end)
+    # model.add_callback("on_train_epoch_end", on_epoch_end)
 
     # model.load(weights="../weights/yolo11n.pt")
     # model.load(weights="../weights/yolo11n_2026-01-12-01_ep200.pt")

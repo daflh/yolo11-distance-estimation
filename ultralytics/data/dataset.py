@@ -262,7 +262,7 @@ class YOLODataset(BaseDataset):
         """
         # Geometric augmentations
         hyp.degrees = 0.0
-        hyp.translate = 0.05
+        hyp.translate = 0.0
         hyp.scale = 0.0
         hyp.shear = 0.0
         hyp.perspective = 0.0
@@ -273,7 +273,6 @@ class YOLODataset(BaseDataset):
         hyp.mosaic = 0.0
         hyp.mixup = 0.0
         hyp.cutmix = 0.0
-        hyp.copy_paste = 0.0
 
         hyp.multi_scale = False  # Multi-scale training
         hyp.augment = False  # Test-time augmentation
