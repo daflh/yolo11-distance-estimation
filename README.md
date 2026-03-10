@@ -1,285 +1,650 @@
 <div align="center">
-  <p>
-    <a href="https://www.ultralytics.com/events/yolovision?utm_source=github&utm_medium=org&utm_campaign=yv25_event" target="_blank">
-      <img width="100%" src="https://raw.githubusercontent.com/ultralytics/assets/main/yolov8/banner-yolov8.png" alt="Ultralytics YOLO banner"></a>
-  </p>
-
-[中文](https://docs.ultralytics.com/zh/) | [한국어](https://docs.ultralytics.com/ko/) | [日本語](https://docs.ultralytics.com/ja/) | [Русский](https://docs.ultralytics.com/ru/) | [Deutsch](https://docs.ultralytics.com/de/) | [Français](https://docs.ultralytics.com/fr/) | [Español](https://docs.ultralytics.com/es) | [Português](https://docs.ultralytics.com/pt/) | [Türkçe](https://docs.ultralytics.com/tr/) | [Tiếng Việt](https://docs.ultralytics.com/vi/) | [العربية](https://docs.ultralytics.com/ar/) <br>
-
-<div>
-    <a href="https://github.com/ultralytics/ultralytics/actions/workflows/ci.yml"><img src="https://github.com/ultralytics/ultralytics/actions/workflows/ci.yml/badge.svg" alt="Ultralytics CI"></a>
-    <a href="https://clickpy.clickhouse.com/dashboard/ultralytics"><img src="https://static.pepy.tech/badge/ultralytics" alt="Ultralytics Downloads"></a>
-    <a href="https://zenodo.org/badge/latestdoi/264818686"><img src="https://zenodo.org/badge/264818686.svg" alt="Ultralytics YOLO Citation"></a>
-    <a href="https://discord.com/invite/ultralytics"><img alt="Ultralytics Discord" src="https://img.shields.io/discord/1089800235347353640?logo=discord&logoColor=white&label=Discord&color=blue"></a>
-    <a href="https://community.ultralytics.com/"><img alt="Ultralytics Forums" src="https://img.shields.io/discourse/users?server=https%3A%2F%2Fcommunity.ultralytics.com&logo=discourse&label=Forums&color=blue"></a>
-    <a href="https://www.reddit.com/r/ultralytics/"><img alt="Ultralytics Reddit" src="https://img.shields.io/reddit/subreddit-subscribers/ultralytics?style=flat&logo=reddit&logoColor=white&label=Reddit&color=blue"></a>
-    <br>
-    <a href="https://console.paperspace.com/github/ultralytics/ultralytics"><img src="https://assets.paperspace.io/img/gradient-badge.svg" alt="Run Ultralytics on Gradient"></a>
-    <a href="https://colab.research.google.com/github/ultralytics/ultralytics/blob/main/examples/tutorial.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open Ultralytics In Colab"></a>
-    <a href="https://www.kaggle.com/models/ultralytics/yolo11"><img src="https://kaggle.com/static/images/open-in-kaggle.svg" alt="Open Ultralytics In Kaggle"></a>
-    <a href="https://mybinder.org/v2/gh/ultralytics/ultralytics/HEAD?labpath=examples%2Ftutorial.ipynb"><img src="https://mybinder.org/badge_logo.svg" alt="Open Ultralytics In Binder"></a>
-</div>
-</div>
-<br>
-
-[Ultralytics](https://www.ultralytics.com/) creates cutting-edge, state-of-the-art (SOTA) [YOLO models](https://www.ultralytics.com/yolo) built on years of foundational research in computer vision and AI. Constantly updated for performance and flexibility, our models are **fast**, **accurate**, and **easy to use**. They excel at [object detection](https://docs.ultralytics.com/tasks/detect/), [tracking](https://docs.ultralytics.com/modes/track/), [instance segmentation](https://docs.ultralytics.com/tasks/segment/), [image classification](https://docs.ultralytics.com/tasks/classify/), and [pose estimation](https://docs.ultralytics.com/tasks/pose/) tasks.
-
-Find detailed documentation in the [Ultralytics Docs](https://docs.ultralytics.com/). Get support via [GitHub Issues](https://github.com/ultralytics/ultralytics/issues/new/choose). Join discussions on [Discord](https://discord.com/invite/ultralytics), [Reddit](https://www.reddit.com/r/ultralytics/), and the [Ultralytics Community Forums](https://community.ultralytics.com/)!
-
-Request an Enterprise License for commercial use at [Ultralytics Licensing](https://www.ultralytics.com/license).
-
-<a href="https://docs.ultralytics.com/models/yolo11/" target="_blank">
-  <img width="100%" src="https://raw.githubusercontent.com/ultralytics/assets/refs/heads/main/yolo/performance-comparison.png" alt="YOLO11 performance plots">
-</a>
-
-<div align="center">
-  <a href="https://github.com/ultralytics"><img src="https://github.com/ultralytics/assets/raw/main/social/logo-social-github.png" width="2%" alt="Ultralytics GitHub"></a>
-  <img src="https://github.com/ultralytics/assets/raw/main/social/logo-transparent.png" width="2%" alt="space">
-  <a href="https://www.linkedin.com/company/ultralytics/"><img src="https://github.com/ultralytics/assets/raw/main/social/logo-social-linkedin.png" width="2%" alt="Ultralytics LinkedIn"></a>
-  <img src="https://github.com/ultralytics/assets/raw/main/social/logo-transparent.png" width="2%" alt="space">
-  <a href="https://twitter.com/ultralytics"><img src="https://github.com/ultralytics/assets/raw/main/social/logo-social-twitter.png" width="2%" alt="Ultralytics Twitter"></a>
-  <img src="https://github.com/ultralytics/assets/raw/main/social/logo-transparent.png" width="2%" alt="space">
-  <a href="https://youtube.com/ultralytics?sub_confirmation=1"><img src="https://github.com/ultralytics/assets/raw/main/social/logo-social-youtube.png" width="2%" alt="Ultralytics YouTube"></a>
-  <img src="https://github.com/ultralytics/assets/raw/main/social/logo-transparent.png" width="2%" alt="space">
-  <a href="https://www.tiktok.com/@ultralytics"><img src="https://github.com/ultralytics/assets/raw/main/social/logo-social-tiktok.png" width="2%" alt="Ultralytics TikTok"></a>
-  <img src="https://github.com/ultralytics/assets/raw/main/social/logo-transparent.png" width="2%" alt="space">
-  <a href="https://ultralytics.com/bilibili"><img src="https://github.com/ultralytics/assets/raw/main/social/logo-social-bilibili.png" width="2%" alt="Ultralytics BiliBili"></a>
-  <img src="https://github.com/ultralytics/assets/raw/main/social/logo-transparent.png" width="2%" alt="space">
-  <a href="https://discord.com/invite/ultralytics"><img src="https://github.com/ultralytics/assets/raw/main/social/logo-social-discord.png" width="2%" alt="Ultralytics Discord"></a>
+  <h1>YOLO11-dist: Monocular Distance Estimation</h1>
+  <p>Object detection and absolute distance estimation using a single monocular camera based on YOLO11</p>
 </div>
 
-## 📄 Documentation
+---
 
-See below for quickstart installation and usage examples. For comprehensive guidance on training, validation, prediction, and deployment, refer to our full [Ultralytics Docs](https://docs.ultralytics.com/).
+## 🎓 About This Project
 
-<details open>
-<summary>Install</summary>
+This repository contains the source code for my undergraduate thesis (*Skripsi*) at **Universitas Gadjah Mada (UGM)**.
 
-Install the `ultralytics` package, including all [requirements](https://github.com/ultralytics/ultralytics/blob/main/pyproject.toml), in a [**Python>=3.8**](https://www.python.org/) environment with [**PyTorch>=1.8**](https://pytorch.org/get-started/locally/).
+In simple terms, this project modifies the YOLO11 object detection model so that it can estimate **how far away an object is**, not just detect it.
 
-[![PyPI - Version](https://img.shields.io/pypi/v/ultralytics?logo=pypi&logoColor=white)](https://pypi.org/project/ultralytics/) [![Ultralytics Downloads](https://static.pepy.tech/badge/ultralytics)](https://clickpy.clickhouse.com/dashboard/ultralytics) [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/ultralytics?logo=python&logoColor=gold)](https://pypi.org/project/ultralytics/)
+Normally, YOLO models answer two questions:
+
+- **What is the object?** (classification)
+- **Where is it in the image?** (bounding box)
+
+The modified model, **YOLO11-dist**, adds a third one:
+
+- **How far away is the object in the real world?**
+
+And it does this using **only a single RGB camera**.
+
+### Why this matters
+
+Many safety systems such as **ADAS (Advanced Driver Assistance Systems)** need accurate distance information to avoid collisions.  
+However, most reliable distance sensing solutions rely on sensors like **LiDAR**, which can cost hundreds or thousands of dollars.
+
+If distance can be estimated reliably from a **cheap monocular camera**, safety features could become much more accessible and easier to deploy.
+
+This project explores that possibility by integrating **absolute distance estimation directly into the YOLO detection pipeline**.
+
+---
+
+# 🧠 Architecture Overview
+
+The main idea of this work is simple:
+
+Instead of building a separate distance estimation network, **distance prediction is integrated directly into the YOLO detection head**.
+
+YOLO normally predicts:
+
+```
+
+[x, y, w, h, class]
+
+```
+
+YOLO11-dist extends this to:
+
+```
+
+[x, y, w, h, class, distance]
+
+```
+
+Each detected object now also has an **absolute distance estimate (in meters)**.
+
+### Modified Detection Head
+
+YOLO11 uses a decoupled head structure for classification and localization.
+
+This project introduces a **third prediction branch**:
+
+```
+
+cv2 → classification
+cv3 → bounding box regression
+cv4 → distance estimation   ← added
+
+````
+
+The new **cv4 branch** predicts the absolute distance for each detected object.
+
+### Feature Fusion for Distance Estimation
+
+Estimating distance from a single 2D image is inherently ambiguous.
+
+To make the prediction more stable, the distance head does not rely solely on convolutional features.  
+It also incorporates **geometric cues derived from the predicted bounding box**, specifically:
+
+- bounding box **height**
+- bounding box **diagonal length**
+
+These geometric signals correlate strongly with distance in perspective images.
+
+An ablation study in the thesis shows that combining:
+
+- **raw feature maps**
+- **bounding box geometry**
+
+produces significantly better distance predictions than using features alone.
+
+### Distance Loss Function
+
+Distance prediction is trained using a **Weighted Mean Squared Error (WMSE)** loss.
+
+The weighting prioritizes **closer objects**, since errors at short range are much more critical for collision avoidance.
+
+---
+
+![Architecture Image](replace_with_your_architecture_image_url_later.png)
+
+---
+
+# 📊 Dataset and Evaluation
+
+The model is trained and evaluated using the **KITTI dataset**, one of the standard benchmarks for autonomous driving research.
+
+Distance estimation focuses on objects within a **0–100 meter range**, which is the most relevant region for driving safety.
+
+### Detection Performance
+
+| Metric | Value |
+|------|------|
+| Precision | 91.9% |
+| Recall | 86.5% |
+| mAP50-95 | 0.714 |
+
+### Distance Estimation Performance
+
+| Metric | Value |
+|------|------|
+| Mean Absolute Error (MAE) | **0.981 m** |
+| Mean Relative Error (MRE) | **4.48%** |
+
+### Edge Device Performance
+
+The model was also tested on a **Raspberry Pi 5** using the NCNN inference backend.
+
+| Device | FPS |
+|------|------|
+| Raspberry Pi 5 (CPU, NCNN) | **10.7 FPS** |
+
+This demonstrates that the approach remains **lightweight enough for embedded systems**.
+
+---
+
+# 📈 Comparison with Previous Methods
+
+We compare **YOLO11n-dist** against previous monocular distance estimation approaches.
+
+| Method | Params (M) | FLOPs (B) | MAE (m) | MRE |
+|------|------|------|------|------|
+| Dist-YOLO | 42.6 | N/A | 2.49 | 0.110 |
+| DECADE | 3.3 | 8.7 | 1.38 | 0.073 |
+| **YOLO11n-dist (Ours)** | **2.67** | **6.7** | **0.981** | **0.045** |
+
+YOLO11n-dist achieves:
+
+- **60.8% lower MAE than Dist-YOLO**
+- **28.9% lower MAE than DECADE**
+
+while also using **fewer parameters** than both models.
+
+---
+
+# 🚀 Quick Start
+
+### Installation
+
+Install dependencies the same way as the standard Ultralytics repository:
 
 ```bash
 pip install ultralytics
+````
+
+---
+
+## Dataset Format
+
+The label format extends the standard YOLO format by appending the 3D distance values:
+
+```
+<class_id> <x_center> <y_center> <width> <height> <dx> <dy> <dz>
 ```
 
-For alternative installation methods, including [Conda](https://anaconda.org/conda-forge/ultralytics), [Docker](https://hub.docker.com/r/ultralytics/ultralytics), and building from source via Git, please consult the [Quickstart Guide](https://docs.ultralytics.com/quickstart/).
+Where:
 
-[![Conda Version](https://img.shields.io/conda/vn/conda-forge/ultralytics?logo=condaforge)](https://anaconda.org/conda-forge/ultralytics) [![Docker Image Version](https://img.shields.io/docker/v/ultralytics/ultralytics?sort=semver&logo=docker)](https://hub.docker.com/r/ultralytics/ultralytics) [![Ultralytics Docker Pulls](https://img.shields.io/docker/pulls/ultralytics/ultralytics?logo=docker)](https://hub.docker.com/r/ultralytics/ultralytics)
+* `dx`, `dy`, `dz` are object distances in meters
+* the model primarily learns from **dz (longitudinal distance)**
 
-</details>
+---
 
-<details open>
-<summary>Usage</summary>
+# Training Procedure
 
-### CLI
+Training follows a **two-stage curriculum learning strategy**.
 
-You can use Ultralytics YOLO directly from the Command Line Interface (CLI) with the `yolo` command:
+### Stage 1 — Object Detection
 
-```bash
-# Predict using a pretrained YOLO model (e.g., YOLO11n) on an image
-yolo predict model=yolo11n.pt source='https://ultralytics.com/images/bus.jpg'
-```
-
-The `yolo` command supports various tasks and modes, accepting additional arguments like `imgsz=640`. Explore the YOLO [CLI Docs](https://docs.ultralytics.com/usage/cli/) for more examples.
-
-### Python
-
-Ultralytics YOLO can also be integrated directly into your Python projects. It accepts the same [configuration arguments](https://docs.ultralytics.com/usage/cfg/) as the CLI:
+First train the model as a normal detector.
 
 ```python
 from ultralytics import YOLO
 
-# Load a pretrained YOLO11n model
-model = YOLO("yolo11n.pt")
+model = YOLO("yolo11n.yaml")
+model.load("yolo11n.pt")
 
-# Train the model on the COCO8 dataset for 100 epochs
-train_results = model.train(
-    data="coco8.yaml",  # Path to dataset configuration file
-    epochs=100,  # Number of training epochs
-    imgsz=640,  # Image size for training
-    device="cpu",  # Device to run on (e.g., 'cpu', 0, [0,1,2,3])
+model.train(
+    data="KITTI.yaml",
+    epochs=200,
+    imgsz=640
 )
-
-# Evaluate the model's performance on the validation set
-metrics = model.val()
-
-# Perform object detection on an image
-results = model("path/to/image.jpg")  # Predict on an image
-results[0].show()  # Display results
-
-# Export the model to ONNX format for deployment
-path = model.export(format="onnx")  # Returns the path to the exported model
 ```
 
-Discover more examples in the YOLO [Python Docs](https://docs.ultralytics.com/usage/python/).
+---
 
-</details>
+### Stage 2 — Distance Estimation
 
-## ✨ Models
+Then train the distance prediction head.
 
-Ultralytics supports a wide range of YOLO models, from early versions like [YOLOv3](https://docs.ultralytics.com/models/yolov3/) to the latest [YOLO11](https://docs.ultralytics.com/models/yolo11/). The tables below showcase YOLO11 models pretrained on the [COCO](https://docs.ultralytics.com/datasets/detect/coco/) dataset for [Detection](https://docs.ultralytics.com/tasks/detect/), [Segmentation](https://docs.ultralytics.com/tasks/segment/), and [Pose Estimation](https://docs.ultralytics.com/tasks/pose/). Additionally, [Classification](https://docs.ultralytics.com/tasks/classify/) models pretrained on the [ImageNet](https://docs.ultralytics.com/datasets/classify/imagenet/) dataset are available. [Tracking](https://docs.ultralytics.com/modes/track/) mode is compatible with all Detection, Segmentation, and Pose models. All [Models](https://docs.ultralytics.com/models/) are automatically downloaded from the latest Ultralytics [release](https://github.com/ultralytics/assets/releases) upon first use.
+The backbone is partially frozen to preserve detection performance.
 
-<a href="https://docs.ultralytics.com/tasks/" target="_blank">
-    <img width="100%" src="https://github.com/ultralytics/docs/releases/download/0/ultralytics-yolov8-tasks-banner.avif" alt="Ultralytics YOLO supported tasks">
-</a>
-<br>
-<br>
+```python
+model = YOLO("yolo11n-dist.yaml")
+model.load("runs/train/weights/best.pt")
 
-<details open><summary>Detection (COCO)</summary>
+model.train(
+    data="KITTI.yaml",
+    epochs=200,
+    freeze=9,
+    max_dist=100.0
+)
+```
 
-Explore the [Detection Docs](https://docs.ultralytics.com/tasks/detect/) for usage examples. These models are trained on the [COCO dataset](https://cocodataset.org/), featuring 80 object classes.
+Distance-sensitive augmentations such as scaling and perspective transformations are disabled during this stage.
 
-| Model                                                                                | size<br><sup>(pixels) | mAP<sup>val<br>50-95 | Speed<br><sup>CPU ONNX<br>(ms) | Speed<br><sup>T4 TensorRT10<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) |
-| ------------------------------------------------------------------------------------ | --------------------- | -------------------- | ------------------------------ | ----------------------------------- | ------------------ | ----------------- |
-| [YOLO11n](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n.pt) | 640                   | 39.5                 | 56.1 ± 0.8                     | 1.5 ± 0.0                           | 2.6                | 6.5               |
-| [YOLO11s](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11s.pt) | 640                   | 47.0                 | 90.0 ± 1.2                     | 2.5 ± 0.0                           | 9.4                | 21.5              |
-| [YOLO11m](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11m.pt) | 640                   | 51.5                 | 183.2 ± 2.0                    | 4.7 ± 0.1                           | 20.1               | 68.0              |
-| [YOLO11l](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11l.pt) | 640                   | 53.4                 | 238.6 ± 1.4                    | 6.2 ± 0.1                           | 25.3               | 86.9              |
-| [YOLO11x](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11x.pt) | 640                   | 54.7                 | 462.8 ± 6.7                    | 11.3 ± 0.2                          | 56.9               | 194.9             |
+---
 
-- **mAP<sup>val</sup>** values refer to single-model single-scale performance on the [COCO val2017](https://cocodataset.org/) dataset. See [YOLO Performance Metrics](https://docs.ultralytics.com/guides/yolo-performance-metrics/) for details. <br>Reproduce with `yolo val detect data=coco.yaml device=0`
-- **Speed** metrics are averaged over COCO val images using an [Amazon EC2 P4d](https://aws.amazon.com/ec2/instance-types/p4/) instance. CPU speeds measured with [ONNX](https://onnx.ai/) export. GPU speeds measured with [TensorRT](https://developer.nvidia.com/tensorrt) export. <br>Reproduce with `yolo val detect data=coco.yaml batch=1 device=0|cpu`
+# Validation
 
-</details>
+Evaluate both detection and distance performance:
 
-<details><summary>Segmentation (COCO)</summary>
+```python
+model = YOLO("yolo11n-dist_best.pt", task="dist")
 
-Refer to the [Segmentation Docs](https://docs.ultralytics.com/tasks/segment/) for usage examples. These models are trained on [COCO-Seg](https://docs.ultralytics.com/datasets/segment/coco/), including 80 classes.
+metrics = model.val(data="KITTI.yaml")
+```
 
-| Model                                                                                        | size<br><sup>(pixels) | mAP<sup>box<br>50-95 | mAP<sup>mask<br>50-95 | Speed<br><sup>CPU ONNX<br>(ms) | Speed<br><sup>T4 TensorRT10<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) |
-| -------------------------------------------------------------------------------------------- | --------------------- | -------------------- | --------------------- | ------------------------------ | ----------------------------------- | ------------------ | ----------------- |
-| [YOLO11n-seg](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n-seg.pt) | 640                   | 38.9                 | 32.0                  | 65.9 ± 1.1                     | 1.8 ± 0.0                           | 2.9                | 9.7               |
-| [YOLO11s-seg](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11s-seg.pt) | 640                   | 46.6                 | 37.8                  | 117.6 ± 4.9                    | 2.9 ± 0.0                           | 10.1               | 33.0              |
-| [YOLO11m-seg](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11m-seg.pt) | 640                   | 51.5                 | 41.5                  | 281.6 ± 1.2                    | 6.3 ± 0.1                           | 22.4               | 113.2             |
-| [YOLO11l-seg](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11l-seg.pt) | 640                   | 53.4                 | 42.9                  | 344.2 ± 3.2                    | 7.8 ± 0.2                           | 27.6               | 132.2             |
-| [YOLO11x-seg](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11x-seg.pt) | 640                   | 54.7                 | 43.8                  | 664.5 ± 3.2                    | 15.8 ± 0.7                          | 62.1               | 296.4             |
+Metrics include:
 
-- **mAP<sup>val</sup>** values are for single-model single-scale on the [COCO val2017](https://cocodataset.org/) dataset. See [YOLO Performance Metrics](https://docs.ultralytics.com/guides/yolo-performance-metrics/) for details. <br>Reproduce with `yolo val segment data=coco.yaml device=0`
-- **Speed** metrics are averaged over COCO val images using an [Amazon EC2 P4d](https://aws.amazon.com/ec2/instance-types/p4/) instance. CPU speeds measured with [ONNX](https://onnx.ai/) export. GPU speeds measured with [TensorRT](https://developer.nvidia.com/tensorrt) export. <br>Reproduce with `yolo val segment data=coco.yaml batch=1 device=0|cpu`
+* detection mAP
+* distance MAE
+* distance MRE
 
-</details>
+---
 
-<details><summary>Classification (ImageNet)</summary>
+# Inference
 
-Consult the [Classification Docs](https://docs.ultralytics.com/tasks/classify/) for usage examples. These models are trained on [ImageNet](https://docs.ultralytics.com/datasets/classify/imagenet/), covering 1000 classes.
+Example inference code:
 
-| Model                                                                                        | size<br><sup>(pixels) | acc<br><sup>top1 | acc<br><sup>top5 | Speed<br><sup>CPU ONNX<br>(ms) | Speed<br><sup>T4 TensorRT10<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) at 224 |
-| -------------------------------------------------------------------------------------------- | --------------------- | ---------------- | ---------------- | ------------------------------ | ----------------------------------- | ------------------ | ------------------------ |
-| [YOLO11n-cls](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n-cls.pt) | 224                   | 70.0             | 89.4             | 5.0 ± 0.3                      | 1.1 ± 0.0                           | 2.8                | 0.5                      |
-| [YOLO11s-cls](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11s-cls.pt) | 224                   | 75.4             | 92.7             | 7.9 ± 0.2                      | 1.3 ± 0.0                           | 6.7                | 1.6                      |
-| [YOLO11m-cls](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11m-cls.pt) | 224                   | 77.3             | 93.9             | 17.2 ± 0.4                     | 2.0 ± 0.0                           | 11.6               | 4.9                      |
-| [YOLO11l-cls](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11l-cls.pt) | 224                   | 78.3             | 94.3             | 23.2 ± 0.3                     | 2.8 ± 0.0                           | 14.1               | 6.2                      |
-| [YOLO11x-cls](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11x-cls.pt) | 224                   | 79.5             | 94.9             | 41.4 ± 0.9                     | 3.8 ± 0.0                           | 29.6               | 13.6                     |
+```python
+from ultralytics import YOLO
 
-- **acc** values represent model accuracy on the [ImageNet](https://www.image-net.org/) dataset validation set. <br>Reproduce with `yolo val classify data=path/to/ImageNet device=0`
-- **Speed** metrics are averaged over ImageNet val images using an [Amazon EC2 P4d](https://aws.amazon.com/ec2/instance-types/p4/) instance. CPU speeds measured with [ONNX](https://onnx.ai/) export. GPU speeds measured with [TensorRT](https://developer.nvidia.com/tensorrt) export. <br>Reproduce with `yolo val classify data=path/to/ImageNet batch=1 device=0|cpu`
+model = YOLO("yolo11n-dist_best.pt", task="dist")
 
-</details>
+results = model.predict(
+    source="test_video.mp4",
+    device="cpu"
+)
 
-<details><summary>Pose (COCO)</summary>
+for result in results:
+    boxes = result.boxes
+    distances = result.distances
+```
 
-See the [Pose Estimation Docs](https://docs.ultralytics.com/tasks/pose/) for usage examples. These models are trained on [COCO-Pose](https://docs.ultralytics.com/datasets/pose/coco/), focusing on the 'person' class.
+Each detection returns:
 
-| Model                                                                                          | size<br><sup>(pixels) | mAP<sup>pose<br>50-95 | mAP<sup>pose<br>50 | Speed<br><sup>CPU ONNX<br>(ms) | Speed<br><sup>T4 TensorRT10<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) |
-| ---------------------------------------------------------------------------------------------- | --------------------- | --------------------- | ------------------ | ------------------------------ | ----------------------------------- | ------------------ | ----------------- |
-| [YOLO11n-pose](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n-pose.pt) | 640                   | 50.0                  | 81.0               | 52.4 ± 0.5                     | 1.7 ± 0.0                           | 2.9                | 7.4               |
-| [YOLO11s-pose](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11s-pose.pt) | 640                   | 58.9                  | 86.3               | 90.5 ± 0.6                     | 2.6 ± 0.0                           | 9.9                | 23.1              |
-| [YOLO11m-pose](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11m-pose.pt) | 640                   | 64.9                  | 89.4               | 187.3 ± 0.8                    | 4.9 ± 0.1                           | 20.9               | 71.4              |
-| [YOLO11l-pose](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11l-pose.pt) | 640                   | 66.1                  | 89.9               | 247.7 ± 1.1                    | 6.4 ± 0.1                           | 26.1               | 90.3              |
-| [YOLO11x-pose](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11x-pose.pt) | 640                   | 69.5                  | 91.1               | 488.0 ± 13.9                   | 12.1 ± 0.2                          | 58.8               | 202.8             |
+```
+[class, bounding box, estimated distance]
+```
 
-- **mAP<sup>val</sup>** values are for single-model single-scale on the [COCO Keypoints val2017](https://docs.ultralytics.com/datasets/pose/coco/) dataset. See [YOLO Performance Metrics](https://docs.ultralytics.com/guides/yolo-performance-metrics/) for details. <br>Reproduce with `yolo val pose data=coco-pose.yaml device=0`
-- **Speed** metrics are averaged over COCO val images using an [Amazon EC2 P4d](https://aws.amazon.com/ec2/instance-types/p4/) instance. CPU speeds measured with [ONNX](https://onnx.ai/) export. GPU speeds measured with [TensorRT](https://developer.nvidia.com/tensorrt) export. <br>Reproduce with `yolo val pose data=coco-pose.yaml batch=1 device=0|cpu`
+---
 
-</details>
+# 📚 References
 
-<details><summary>Oriented Bounding Boxes (DOTAv1)</summary>
+* **Ultralytics YOLO11** – base detection framework
+* **KITTI Vision Benchmark Suite** – Geiger et al. (2012)
 
-Check the [OBB Docs](https://docs.ultralytics.com/tasks/obb/) for usage examples. These models are trained on [DOTAv1](https://docs.ultralytics.com/datasets/obb/dota-v2/#dota-v10/), including 15 classes.
+Distance estimation comparison methods:
 
-| Model                                                                                        | size<br><sup>(pixels) | mAP<sup>test<br>50 | Speed<br><sup>CPU ONNX<br>(ms) | Speed<br><sup>T4 TensorRT10<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) |
-| -------------------------------------------------------------------------------------------- | --------------------- | ------------------ | ------------------------------ | ----------------------------------- | ------------------ | ----------------- |
-| [YOLO11n-obb](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n-obb.pt) | 1024                  | 78.4               | 117.6 ± 0.8                    | 4.4 ± 0.0                           | 2.7                | 16.8              |
-| [YOLO11s-obb](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11s-obb.pt) | 1024                  | 79.5               | 219.4 ± 4.0                    | 5.1 ± 0.0                           | 9.7                | 57.1              |
-| [YOLO11m-obb](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11m-obb.pt) | 1024                  | 80.9               | 562.8 ± 2.9                    | 10.1 ± 0.4                          | 20.9               | 182.8             |
-| [YOLO11l-obb](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11l-obb.pt) | 1024                  | 81.0               | 712.5 ± 5.0                    | 13.5 ± 0.6                          | 26.1               | 231.2             |
-| [YOLO11x-obb](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11x-obb.pt) | 1024                  | 81.3               | 1408.6 ± 7.7                   | 28.6 ± 1.0                          | 58.8               | 519.1             |
+* Dist-YOLO (2022)
+* DECADE (2024)
 
-- **mAP<sup>test</sup>** values are for single-model multiscale performance on the [DOTAv1 test set](https://captain-whu.github.io/DOTA/dataset.html). <br>Reproduce by `yolo val obb data=DOTAv1.yaml device=0 split=test` and submit merged results to the [DOTA evaluation server](https://captain-whu.github.io/DOTA/evaluation.html).
-- **Speed** metrics are averaged over [DOTAv1 val images](https://docs.ultralytics.com/datasets/obb/dota-v2/#dota-v10) using an [Amazon EC2 P4d](https://aws.amazon.com/ec2/instance-types/p4/) instance. CPU speeds measured with [ONNX](https://onnx.ai/) export. GPU speeds measured with [TensorRT](https://developer.nvidia.com/tensorrt) export. <br>Reproduce by `yolo val obb data=DOTAv1.yaml batch=1 device=0|cpu`
+---
 
-</details>
+# 📄 License
 
-## 🧩 Integrations
+This project is licensed under **AGPL-3.0**, inheriting the license from the original Ultralytics YOLO repository.
 
-Our key integrations with leading AI platforms extend the functionality of Ultralytics' offerings, enhancing tasks like dataset labeling, training, visualization, and model management. Discover how Ultralytics, in collaboration with partners like [Weights & Biases](https://docs.ultralytics.com/integrations/weights-biases/), [Comet ML](https://docs.ultralytics.com/integrations/comet/), [Roboflow](https://docs.ultralytics.com/integrations/roboflow/), and [Intel OpenVINO](https://docs.ultralytics.com/integrations/openvino/), can optimize your AI workflow. Explore more at [Ultralytics Integrations](https://docs.ultralytics.com/integrations/).
+============================================================
 
-<a href="https://docs.ultralytics.com/integrations/" target="_blank">
-    <img width="100%" src="https://github.com/ultralytics/assets/raw/main/yolov8/banner-integrations.png" alt="Ultralytics active learning integrations">
-</a>
-<br>
-<br>
+# YOLO11 Distance Estimation
+
+Distance-aware object detection based on **YOLO11** for **monocular absolute distance estimation**.
+
+This repository contains a modified YOLO11 architecture that performs **object detection and distance estimation simultaneously** in a single forward pass.
+
+The model was developed as part of an undergraduate thesis focused on enabling **efficient monocular distance estimation for autonomous driving and embedded systems**.
+
+---
+
+# Overview
+
+Estimating the absolute distance of objects from a **single RGB camera** is a challenging problem because depth information is not explicitly available in images.
+
+Previous approaches such as **Dist-YOLO** and **DECADE** address this problem by either:
+
+* extending YOLO prediction vectors, or
+* using multi-stage pipelines combining detection and regression modules.
+
+This project proposes a **modified YOLO11 architecture** where distance estimation is integrated directly into the **detection head**, allowing the model to predict:
+
+* bounding box location
+* object class
+* absolute distance
+
+simultaneously.
+
+The approach leverages both:
+
+* **deep feature maps from the neck**
+* **geometric cues from bounding box dimensions (height and diagonal)**
+
+which were found to have a strong correlation with object distance.
+
+---
+
+# Architecture
+
+The model extends the YOLO11 detection head with an additional **distance regression branch**.
+
+The prediction head outputs:
+
+```
+[x, y, w, h, class, distance]
+```
+
+Distance is predicted **per bounding box** for **true positive detections**.
+
+Distance regression is trained using **Weighted Mean Squared Error (WMSE)**.
+
+Key features:
+
+* Integrated **multi-task learning**
+* Distance prediction from:
+
+  * feature maps
+  * bounding box height
+  * bounding box diagonal
+* Lightweight architecture
+* Only **+3.04% parameter increase** compared to the base YOLO11 model 
+
+---
+
+# Dataset
+
+Training and evaluation were performed using the **KITTI dataset**.
+
+Characteristics:
+
+* Monocular RGB images
+* Urban driving scenarios
+* Distance range: **0 – 100 meters**
+
+The training process used a **two-stage curriculum learning approach**:
+
+Stage 1
+Train standard object detection.
+
+Stage 2
+Train the distance estimation head while preserving detection performance.
+
+---
+
+# Results
+
+## Detection Performance
+
+| Metric    | Value |
+| --------- | ----- |
+| Precision | 91.9% |
+| Recall    | 86.5% |
+| mAP50     | 0.922 |
+| mAP50-95  | 0.714 |
+
+---
+
+## Distance Estimation Performance
+
+| Metric | Value       |
+| ------ | ----------- |
+| MAE    | **0.981 m** |
+| MRE    | **4.48%**   |
+
+---
+
+## Comparison with Previous Work
+
+| Method              | Params (M) | FLOPs (B) | MAE (m)   | MRE       |
+| ------------------- | ---------- | --------- | --------- | --------- |
+| Dist-YOLO           | 42.6       | N/A       | 2.50      | 0.11      |
+| DECADE              | 3.3        | 8.7       | 1.38      | 0.073     |
+| YOLO11n-dist (ours) | **2.67**   | **6.7**   | **0.981** | **0.045** |
+
+The proposed model achieves:
+
+* **28.9% lower MAE than DECADE**
+* **60.8% lower MAE than Dist-YOLO**
+
+while using **fewer parameters and FLOPs**.
+
+---
+
+# Embedded Deployment
+
+The model was tested on **Raspberry Pi 5**.
+
+Using the **NCNN inference framework**, the system achieved:
+
+```
+10.7 FPS (CPU inference)
+```
+
+This demonstrates that the model can run on **single board computers for embedded vision applications**.
+
+---
+
+# Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/daflh/yolo11-distance-estimation
+cd yolo11-distance-estimation
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# Training
+
+Example training command:
+
+```bash
+yolo train \
+model=yolo11n.yaml \
+data=kitti.yaml \
+epochs=200
+```
+
+Training is performed in **two stages**:
+
+1️⃣ Detection training
+2️⃣ Distance estimation training
+
+---
+
+# Inference
+
+Example inference:
+
+```bash
+yolo predict \
+model=best.pt \
+source=image.jpg
+```
+
+Example output:
+
+```
+car 0.91
+distance: 14.3 m
+```
+
+---
+
+# Project Structure
+
+```
+ultralytics/
+models/
+distance_error_analysis.ipynb
+model_benchmark.py
+test.py
+```
+
+---
+
+# Citation
+
+If you use this work, please cite:
+
+```
+@thesis{haq2026,
+  title={Development of an Object Detection and Absolute Distance Estimation System Using Monocular Camera on Single Board Computer},
+  author={Muhammad Daaffi Ul Haq},
+  year={2026}
+}
+```
+
+---
+
+# Acknowledgements
+
+* Ultralytics YOLO
+* KITTI dataset
+* Previous work on Dist-YOLO and DECADE
+
+============================================================
 
 <div align="center">
-  <a href="https://www.ultralytics.com/hub">
-    <img src="https://github.com/ultralytics/assets/raw/main/partners/logo-ultralytics-hub.png" width="10%" alt="Ultralytics HUB logo"></a>
-  <img src="https://github.com/ultralytics/assets/raw/main/social/logo-transparent.png" width="15%" height="0" alt="space">
-  <a href="https://docs.ultralytics.com/integrations/weights-biases/">
-    <img src="https://github.com/ultralytics/assets/raw/main/partners/logo-wb.png" width="10%" alt="Weights & Biases logo"></a>
-  <img src="https://github.com/ultralytics/assets/raw/main/social/logo-transparent.png" width="15%" height="0" alt="space">
-  <a href="https://docs.ultralytics.com/integrations/comet/">
-    <img src="https://github.com/ultralytics/assets/raw/main/partners/logo-comet.png" width="10%" alt="Comet ML logo"></a>
-  <img src="https://github.com/ultralytics/assets/raw/main/social/logo-transparent.png" width="15%" height="0" alt="space">
-  <a href="https://docs.ultralytics.com/integrations/neural-magic/">
-    <img src="https://github.com/ultralytics/assets/raw/main/partners/logo-neuralmagic.png" width="10%" alt="Neural Magic logo"></a>
+  <h1>YOLO11-dist: Monocular Distance Estimation</h1>
+  <p>Object detection and absolute distance estimation using monocular camera based on YOLO11</p>
 </div>
 
-|                                                       Ultralytics HUB 🌟                                                        |                                                          Weights & Biases                                                           |                                                                              Comet                                                                              |                                                        Neural Magic                                                         |
-| :-----------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------: |
-| Streamline YOLO workflows: Label, train, and deploy effortlessly with [Ultralytics HUB](https://hub.ultralytics.com/). Try now! | Track experiments, hyperparameters, and results with [Weights & Biases](https://docs.ultralytics.com/integrations/weights-biases/). | Free forever, [Comet ML](https://docs.ultralytics.com/integrations/comet/) lets you save YOLO models, resume training, and interactively visualize predictions. | Run YOLO inference up to 6x faster with [Neural Magic DeepSparse](https://docs.ultralytics.com/integrations/neural-magic/). |
+## 🎓 About This Project
 
-## 🌟 Ultralytics HUB
+[cite_start]This repository contains the source code for my undergraduate thesis (*Skripsi*) at Universitas Gadjah Mada (UGM)[cite: 1876]. 
 
-Experience seamless AI with [Ultralytics HUB](https://hub.ultralytics.com/), the all-in-one platform for data visualization, training YOLO models, and deployment—no coding required. Transform images into actionable insights and bring your AI visions to life effortlessly using our cutting-edge platform and user-friendly [Ultralytics App](https://www.ultralytics.com/app-install). Start your journey for **Free** today!
+**What does it do?** In a concrete, non-scientific way: This project takes the popular YOLO11 object detection model and makes it smarter. [cite_start]Normally, YOLO can tell you *what* an object is and *where* it is on the screen by drawing a bounding box around it[cite: 2108]. [cite_start]My modified version, **YOLO11-dist**, also tells you exactly *how far away* that object is in the real world (in meters), using just a single standard camera[cite: 2097]. 
 
-<a href="https://www.ultralytics.com/hub" target="_blank">
-<img width="100%" src="https://github.com/ultralytics/assets/raw/main/im/ultralytics-hub.png" alt="Ultralytics HUB preview image"></a>
+**Why was it created?**
+For self-driving cars and Advanced Driver Assistance Systems (ADAS) to avoid collisions, they need to know the distance to other vehicles and pedestrians. [cite_start]Usually, this requires expensive sensors like LiDAR, which can cost thousands of dollars[cite: 1934]. By using a regular, cheap monocular camera and AI to estimate distance, we can make life-saving safety features much more affordable and accessible.
 
-## 🤝 Contribute
+## 🧠 The New Architecture
 
-We thrive on community collaboration! Ultralytics YOLO wouldn't be the SOTA framework it is without contributions from developers like you. Please see our [Contributing Guide](https://docs.ultralytics.com/help/contributing/) to get started. We also welcome your feedback—share your experience by completing our [Survey](https://www.ultralytics.com/survey?utm_source=github&utm_medium=social&utm_campaign=Survey). A huge **Thank You** 🙏 to everyone who contributes!
+[cite_start]To make YOLO11 understand distance, I modified its "prediction head"—the part of the network that makes final decisions[cite: 2136]. 
 
-<!-- SVG image from https://opencollective.com/ultralytics/contributors.svg?width=1280 -->
+* [cite_start]**Decoupled Head Addition:** YOLO11 originally has branches for class predictions (`cv2`) and bounding box distributions (`cv3`)[cite: 2140]. [cite_start]I added a new branch called `cv4` specifically for absolute distance estimation[cite: 2140].
+* **Feature Fusion:** Estimating distance from a 2D image is hard. [cite_start]To help the model, the `cv4` branch doesn't just look at the raw image features from the network's neck[cite: 2141]. It also uses the geometric features of the detected bounding box (specifically the height and diagonal length, which strongly correlate with distance). [cite_start]This fusion makes the prediction much more stable[cite: 2144].
+* **Custom Loss Function:** I introduced a Weighted Mean Squared Error (WMSE) loss function that gives more priority to objects that are closer to the camera, because close objects are more critical for collision avoidance.
 
-[![Ultralytics open-source contributors](https://raw.githubusercontent.com/ultralytics/assets/main/im/image-contributors.png)](https://github.com/ultralytics/ultralytics/graphs/contributors)
+![Architecture Image](replace_with_your_architecture_image_url_later.png)
 
-We look forward to your contributions to help make the Ultralytics ecosystem even better!
+## 📊 Benchmarks & Comparison
 
-## 📜 License
+The model was trained and evaluated on the **KITTI dataset**, focusing on objects up to 100 meters away. [cite_start]The tests were also run on a resource-constrained **Raspberry Pi 5** to prove its efficiency[cite: 2203].
 
-Ultralytics offers two licensing options to suit different needs:
+**Performance Metrics:**
+* **Object Detection:** Precision: 91.9% | [cite_start]Recall: 86.5% | mAP50-95: 0.714 [cite: 2398]
+* **Distance Estimation:** Mean Absolute Error (MAE): 0.981 meters | [cite_start]Mean Relative Error (MRE): 4.48% [cite: 2398]
+* [cite_start]**Speed (Raspberry Pi 5 CPU using NCNN):** 10.7 FPS [cite: 2450]
 
-- **AGPL-3.0 License**: This [OSI-approved](https://opensource.org/license) open-source license is perfect for students, researchers, and enthusiasts. It encourages open collaboration and knowledge sharing. See the [LICENSE](https://github.com/ultralytics/ultralytics/blob/main/LICENSE) file for full details.
-- **Ultralytics Enterprise License**: Designed for commercial use, this license allows for the seamless integration of Ultralytics software and AI models into commercial products and services, bypassing the open-source requirements of AGPL-3.0. If your use case involves commercial deployment, please contact us via [Ultralytics Licensing](https://www.ultralytics.com/license).
+**Comparison with Previous SOTA:**
+[cite_start]We compared YOLO11n-dist (nano version) against previous one-stage (Dist-YOLO) and multi-stage (DECADE) approaches[cite: 2471].
 
-## 📞 Contact
+| Method | Params (M) | FLOPs (B) | MAE (m) | MRE |
+| :--- | :--- | :--- | :--- | :--- |
+| [cite_start]**Dist-YOLO** [cite: 2471] | [cite_start]42.6 [cite: 2471] | [cite_start]N/A [cite: 2471] | [cite_start]2.49 [cite: 2471] | [cite_start]0.110 [cite: 2471] |
+| [cite_start]**DECADE** [cite: 2471] | [cite_start]3.3 [cite: 2471] | [cite_start]8.7 [cite: 2471] | [cite_start]1.38 [cite: 2471] | [cite_start]0.073 [cite: 2471] |
+| [cite_start]**YOLO11n-dist (Ours)** [cite: 2471] | [cite_start]2.67 [cite: 2471] | [cite_start]6.7 [cite: 2471] | [cite_start]**0.981** [cite: 2471] | [cite_start]**0.045** [cite: 2471] |
 
-For bug reports and feature requests related to Ultralytics software, please visit [GitHub Issues](https://github.com/ultralytics/ultralytics/issues). For questions, discussions, and community support, join our active communities on [Discord](https://discord.com/invite/ultralytics), [Reddit](https://www.reddit.com/r/ultralytics/), and the [Ultralytics Community Forums](https://community.ultralytics.com/). We're here to help with all things Ultralytics!
+*YOLO11n-dist achieved a 60.8% reduction in MAE compared to Dist-YOLO and a 28.9% reduction compared to DECADE!*
 
-<br>
-<div align="center">
-  <a href="https://github.com/ultralytics"><img src="https://github.com/ultralytics/assets/raw/main/social/logo-social-github.png" width="3%" alt="Ultralytics GitHub"></a>
-  <img src="https://github.com/ultralytics/assets/raw/main/social/logo-transparent.png" width="3%" alt="space">
-  <a href="https://www.linkedin.com/company/ultralytics/"><img src="https://github.com/ultralytics/assets/raw/main/social/logo-social-linkedin.png" width="3%" alt="Ultralytics LinkedIn"></a>
-  <img src="https://github.com/ultralytics/assets/raw/main/social/logo-transparent.png" width="3%" alt="space">
-  <a href="https://twitter.com/ultralytics"><img src="https://github.com/ultralytics/assets/raw/main/social/logo-social-twitter.png" width="3%" alt="Ultralytics Twitter"></a>
-  <img src="https://github.com/ultralytics/assets/raw/main/social/logo-transparent.png" width="3%" alt="space">
-  <a href="https://youtube.com/ultralytics?sub_confirmation=1"><img src="https://github.com/ultralytics/assets/raw/main/social/logo-social-youtube.png" width="3%" alt="Ultralytics YouTube"></a>
-  <img src="https://github.com/ultralytics/assets/raw/main/social/logo-transparent.png" width="3%" alt="space">
-  <a href="https://www.tiktok.com/@ultralytics"><img src="https://github.com/ultralytics/assets/raw/main/social/logo-social-tiktok.png" width="3%" alt="Ultralytics TikTok"></a>
-  <img src="https://github.com/ultralytics/assets/raw/main/social/logo-transparent.png" width="3%" alt="space">
-  <a href="https://ultralytics.com/bilibili"><img src="https://github.com/ultralytics/assets/raw/main/social/logo-social-bilibili.png" width="3%" alt="Ultralytics BiliBili"></a>
-  <img src="https://github.com/ultralytics/assets/raw/main/social/logo-transparent.png" width="3%" alt="space">
-  <a href="https://discord.com/invite/ultralytics"><img src="https://github.com/ultralytics/assets/raw/main/social/logo-social-discord.png" width="3%" alt="Ultralytics Discord"></a>
-</div>
+## 🚀 Quick Start
+
+### 1. Installation
+Install the required packages just like the standard Ultralytics repo:
+```bash
+pip install ultralytics
+
+```
+
+### 2. Dataset Preparation
+
+Format your labels similarly to standard YOLO, but append the absolute 3D distances `dx`, `dy`, `dz` (in meters) to the end of each line. We primarily use `dz` (longitudinal distance) for the distance target.
+
+```text
+<class_id> <x_center> <y_center> <width> <height> <dx> <dy> <dz>
+
+```
+
+### 3. Training
+
+Training is done using a two-stage Curriculum Learning approach.
+
+**Stage 1: Object Detection**
+Train the model to detect objects first, using standard pre-trained weights.
+
+```python
+from ultralytics import YOLO
+
+model = YOLO("yolo11n.yaml")
+model.load(weights="yolo11n.pt")
+model.train(data="KITTI.yaml", epochs=200, imgsz=640)
+
+```
+
+**Stage 2: Distance Estimation**
+Freeze the backbone and train the distance prediction head. Distance-sensitive augmentations (like scaling or perspective) are automatically disabled.
+
+```python
+model = YOLO("yolo11n-dist.yaml")
+model.load(weights="runs/train/weights/best.pt") # Weights from Stage 1
+model.train(data="KITTI.yaml", epochs=200, freeze=9, max_dist=100.0)
+
+```
+
+### 4. Validation
+
+Evaluate the model's performance on your validation set:
+
+```python
+model = YOLO("yolo11n-dist_best.pt", task="dist")
+metrics = model.val(data="KITTI.yaml")
+# Metrics will include object detection mAP as well as distance MAE and MRE
+
+```
+
+### 5. Inference
+
+Run inference on images or videos. The model will output bounding boxes along with the estimated distance in meters.
+
+```python
+from ultralytics import YOLO
+import cv2
+
+model = YOLO("yolo11n-dist_best.pt", task="dist")
+results = model.predict(source="test_video.mp4", device="cpu")
+
+for result in results:
+    boxes = result.boxes
+    # Access predicted distances along with the bounding boxes
+    distances = result.distances 
+
+```
+
+## 📜 References & Acknowledgements
+
+* **Ultralytics YOLO11:** The foundational framework for this project.
+* **KITTI Dataset:** Geiger, A., et al. "Are we ready for autonomous driving? The KITTI vision benchmark suite." (2012) .
+
+
+* **Dist-YOLO:** Vajgl, M., et al. "Dist-YOLO: Fast Object Detection with Distance Estimation." (2022) .
+
+
+* **DECADE:** Shahzad, M., et al. "DECADE: Towards Designing Efficient-yet-Accurate Distance Estimation Modules..." (2024).
+
+
+
+## 📄 License
+
+This project is licensed under the **AGPL-3.0 License**, inheriting from the original Ultralytics YOLO repository.
