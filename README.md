@@ -13,15 +13,15 @@ This modified model, **YOLO11-dist**, adds a third one:
 
 And it does this using **only a single RGB camera**.
 
-<img src="./assets/Result_on_Validation_Dataset_with_BEV.png" alt="Result on Validation Dataset with BEV" style="width:900px; height:auto;">
+<img src="./assets/Result_on_Validation_Dataset_with_BEV.png" alt="Result on Validation Dataset with BEV" style="width:750px; height:auto;">
 
 # 🔎 Overview
 
 Many safety systems such as ADAS (Advanced Driver Assistance Systems) need accurate distance information to avoid collisions. However, most reliable distance sensing solutions rely on sensors like LiDAR, which can cost hundreds or thousands of dollars. If distance can be estimated reliably from a relatively cheaper monocular camera, safety features could become much more accessible and easier to deploy.
 
 However, estimating the absolute distance of objects from a single RGB camera is a challenging problem because depth information is not explicitly available in images. Previous approaches such as Dist-YOLO and DECADE address this problem by either:
-* extending YOLO prediction vectors (modifying the architecture), or
-* using multi-stage pipelines combining detection and regression modules.
+* extending YOLO's prediction architecture, or
+* using multi-models approach.
 
 This project proposes a modified YOLO11 architecture where distance estimation is integrated directly into the detection head, allowing the model to predict:
 * bounding box location
@@ -55,7 +55,7 @@ Each detected object now also has an absolute distance estimate (in meters).
 
 YOLO11 uses a decoupled head structure for classification and localization.
 
-<img src="./assets/YOLO11-dist_Head_Architecture.png" alt="YOLO11-dist Detection Head Architecture Diagram" style="width:500px; height:auto;">
+<img src="./assets/YOLO11-dist_Head_Architecture.png" alt="YOLO11-dist Detection Head Architecture Diagram" style="width:400px; height:auto;">
 
 This project introduces a **third prediction branch**:
 
@@ -94,7 +94,7 @@ Distance prediction is trained using a **Weighted Mean Squared Error (WMSE)** lo
 
 The weighting prioritizes **closer objects**, since errors at short range are much more critical for collision avoidance.
 
-<img src="./assets/YOLO11-dist_Loss_Function.png" alt="YOLO11-dist Loss Function Diagram" style="width:550px; height:auto;">
+<img src="./assets/YOLO11-dist_Loss_Function.png" alt="YOLO11-dist Loss Function Diagram" style="width:450px; height:auto;">
 
 # 📊 Dataset and Evaluation
 
@@ -102,7 +102,7 @@ The model is trained and evaluated using the **KITTI dataset**, one of the stand
 
 Distance estimation focuses on objects within a **0–100 meter range**, which is the most relevant region for driving safety.
 
-<img src="./assets/Metrics_Result_on_Training_Stage_2.png" alt="Metrics Result on Training Stage 2" style="width:600px; height:auto;">
+<img src="./assets/Metrics_Result_on_Training_Stage_2.png" alt="Metrics Result on Training Stage 2" style="width:500px; height:auto;">
 
 ### Detection Performance
 
