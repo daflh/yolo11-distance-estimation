@@ -7,11 +7,13 @@ Normally, YOLO models answer two questions:
 - **What is the object?** (classification)
 - **Where is it in the image?** (bounding box)
 
-The modified model, **YOLO11-dist**, adds a third one:
+This modified model, **YOLO11-dist**, adds a third one:
 
 - **How far away is the object in the real world?**
 
 And it does this using **only a single RGB camera**.
+
+<img src="./assets/Result_on_Validation_Dataset_with_BEV.png" alt="Result on Validation Dataset with BEV" style="width:900px; height:auto;">
 
 # 🔎 Overview
 
@@ -29,7 +31,7 @@ simultaneously.
 
 The approach leverages both feature maps directly from the neck as well as geometric cues from bounding box dimensions (height and diagonal), which were found to have a strong correlation with object distance.
 
-_Note_: This research was developed as part of my undergraduate thesis at Universitas Gadjah Mada (UGM).
+This research was developed as part of my undergraduate thesis at Universitas Gadjah Mada (UGM).
 
 # 🧠 Architecture
 
@@ -52,6 +54,8 @@ Each detected object now also has an absolute distance estimate (in meters).
 ### Modified Detection Head
 
 YOLO11 uses a decoupled head structure for classification and localization.
+
+<img src="./assets/YOLO11-dist_Head_Architecture.png" alt="YOLO11-dist Detection Head Architecture Diagram" style="width:500px; height:auto;">
 
 This project introduces a **third prediction branch**:
 
@@ -90,13 +94,15 @@ Distance prediction is trained using a **Weighted Mean Squared Error (WMSE)** lo
 
 The weighting prioritizes **closer objects**, since errors at short range are much more critical for collision avoidance.
 
-![Architecture Image](replace_with_your_architecture_image_url_later.png)
+<img src="./assets/YOLO11-dist_Loss_Function.png" alt="YOLO11-dist Loss Function Diagram" style="width:550px; height:auto;">
 
 # 📊 Dataset and Evaluation
 
 The model is trained and evaluated using the **KITTI dataset**, one of the standard benchmarks for autonomous driving research.
 
 Distance estimation focuses on objects within a **0–100 meter range**, which is the most relevant region for driving safety.
+
+<img src="./assets/Metrics_Result_on_Training_Stage_2.png" alt="Metrics Result on Training Stage 2" style="width:600px; height:auto;">
 
 ### Detection Performance
 
@@ -110,8 +116,8 @@ Distance estimation focuses on objects within a **0–100 meter range**, which i
 
 | Metric | Value |
 |------|------|
-| Mean Absolute Error (MAE) | **0.981 m** |
-| Mean Relative Error (MRE) | **4.48%** |
+| Mean Absolute Error (MAE) | 0.981 m |
+| Mean Relative Error (MRE) | 4.48% |
 
 ### Edge Device Performance
 
@@ -119,7 +125,7 @@ The model was also tested on a **Raspberry Pi 5** using the NCNN inference backe
 
 | Device | FPS |
 |------|------|
-| Raspberry Pi 5 (CPU, NCNN) | **10.7 FPS** |
+| Raspberry Pi 5 (CPU, NCNN) | 10.7 FPS |
 
 This demonstrates that the approach remains **lightweight enough for embedded systems**.
 
@@ -131,7 +137,7 @@ We compare **YOLO11n-dist** against previous monocular distance estimation appro
 |------|------|------|------|------|
 | Dist-YOLO | 42.6 | N/A | 2.49 | 0.110 |
 | DECADE | 3.3 | 8.7 | 1.38 | 0.073 |
-| **YOLO11n-dist (Ours)** | **2.67** | **6.7** | **0.981** | **0.045** |
+| YOLO11n-dist (Ours) | 2.67 | 6.7 | 0.981 | 0.045 |
 
 YOLO11n-dist achieves:
 
@@ -245,7 +251,7 @@ Each detection returns:
 [class, bounding box, estimated distance]
 ```
 
-# 📚 References and Further Reading
+# 📚 Further Reading
 
 * Ultralytics YOLO11 – base detection framework
 * KITTI Vision Benchmark Suite – Geiger et al. (2012)
