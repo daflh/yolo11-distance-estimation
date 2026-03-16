@@ -20,13 +20,16 @@ And it does this using only a single RGB camera.
 Many safety systems such as ADAS (Advanced Driver Assistance Systems) need accurate distance information to avoid collisions. However, most reliable distance sensing solutions rely on sensors like LiDAR, which can cost hundreds or thousands of dollars. If distance can be estimated reliably from a relatively cheaper monocular camera, safety features could become much more accessible and easier to deploy.
 
 However, estimating the absolute distance of objects from a single RGB camera is a challenging problem because depth information is not explicitly available in images. Previous approaches such as Dist-YOLO and DECADE address this problem by either:
+
 * extending YOLO's prediction architecture, or
 * using multi-models approach.
 
 This project proposes a modified YOLO11 architecture where distance estimation is integrated directly into the detection head, allowing the model to predict:
+
 * bounding box location
 * object class
 * absolute distance
+
 simultaneously.
 
 The approach leverages both feature maps directly from the neck as well as geometric cues from predicted bounding box dimensions (height and diagonal), which were found to have a strong correlation with object distance.
@@ -57,10 +60,7 @@ It also incorporates geometric cues derived from the predicted bounding box, spe
 - bounding box height
 - bounding box diagonal length
 
-These geometric signals correlate strongly with distance in perspective images. We showed that combining:
-- raw feature maps
-- bounding box geometry
-produces significantly better distance predictions than using features alone.
+These geometric signals correlate strongly with distance in perspective images. We showed that combining raw feature maps and bounding box geometry produces significantly better distance predictions than using features alone.
 
 ### Distance Loss Function
 
