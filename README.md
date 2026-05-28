@@ -153,6 +153,6 @@ We have provided some ready-to-use examples for training, validation, and infere
 
 # 🙏 Acknowledgements
 
-This research was developed as part of my undergraduate thesis (*skripsi*) at Universitas Gadjah Mada (UGM) under the supervision of Dr. M. Idham Ananta Timur, M.Kom.
+This research was developed as part of my undergraduate thesis (*skripsi*) at Universitas Gadjah Mada (UGM) under the supervision of Dr. M. Idham Ananta Timur, M.Kom. You can read the English version of the thesis [here](https://drive.google.com/file/d/1F3iM0JFhH-gqVE3S50R-Js8oaNSA2OmU/view?usp=sharing).
 
 I would also like to acknowledge the Ultralytics team for developing and maintaining the YOLO framework that made this work possible, as well as the researchers behind the KITTI dataset.
